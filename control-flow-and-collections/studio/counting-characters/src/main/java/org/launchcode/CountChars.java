@@ -4,7 +4,7 @@ import java.util.HashMap;
 import  java.util.Map;
 import  java.util.Scanner;
 
-//Update
+//New
 public class CountChars {
     public static void main(String[] args) {
 
