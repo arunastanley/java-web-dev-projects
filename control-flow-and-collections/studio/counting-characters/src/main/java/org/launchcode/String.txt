@@ -1,0 +1,1 @@
+You’ll need to initialize the counts for the characters in some fashion. It’s probably better to do this as you go through the string instead of doing so before you loop through it. (WHY?)
