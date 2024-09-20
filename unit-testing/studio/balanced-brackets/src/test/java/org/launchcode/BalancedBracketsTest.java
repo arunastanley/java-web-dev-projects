@@ -77,4 +77,9 @@ class BalancedBracketsTest {
         assertFalse(BalancedBrackets.hasBalancedBrackets("]["));
     }
 
+    @Test
+    public void oCCOReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("[La]un]chCode["));
+    }
+
 }

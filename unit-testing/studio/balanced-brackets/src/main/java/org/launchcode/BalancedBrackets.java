@@ -30,6 +30,7 @@ public class BalancedBrackets {
                 brackets++;
             } else if (ch == ']') {
                 if (test1.contains("[")){
+                    test1.remove("[");
                     brackets--;
                 } else return false;
 //                for (String item1 : test1){
