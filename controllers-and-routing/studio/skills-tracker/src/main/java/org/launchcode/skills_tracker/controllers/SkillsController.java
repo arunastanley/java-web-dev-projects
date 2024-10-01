@@ -15,11 +15,11 @@ public class SkillsController {
         return  "<html>" +
                 "<body>" +
                 "<h1>Skills Tracker</h1>" +
-                "<h2>Programming languages</h2>" +
+                "<h2>We have a few skills we would like to learn. Here is the list!</h2>" +
                 "<ol>" +
                 "<li>Java</li>" +
                 "<li>JavaScript</li>" +
-                "<li>Dot Net</li>" +
+                "<li>Python</li>" +
                 "</ol>" +
                 "</body>" +
                 "</html>";
@@ -29,13 +29,32 @@ public class SkillsController {
     @ResponseBody
     public String formDetails(){
         return "<html>" +
-                "<body>" +
+                "<body style=\"font-size:2vw\">" +
                 "<form method = \"post\" action = 'processForm'>" +
-                "<input type = 'text' name = 'name' />" +
+                "<label>Name:</label>"+"<br>"+
+                "<input type = 'text' name = 'name' /><br>"+
+
+
+                "<label>My favourite language:</label>"+"<br>"+
                 "<select name = 'favLanguage'>" +
                 "<option value = 'Java'> Java </option>" +
                 "<option value = 'JavaScript'> JavaScript </option>" +
-                "<option value = 'DotNet'> DotNet </option>" +
+                "<option value = 'Python'> DotNet </option>" +
+                "</select><br>" +
+
+                "<label>My second favourite language:</label>"+"<br>"+
+                "<select name = 'secFav'>" +
+                "<option value = 'Java'> Java </option>" +
+                "<option value = 'JavaScript'> JavaScript </option>" +
+                "<option value = 'Python'> DotNet </option>" +
+                "</select><br>" +
+
+                "<label>My third favourite language:</label>"+"<br>"+
+                "<select name = 'thirdFav'>" +
+                "<option value = 'Java'> Java </option>" +
+                "<option value = 'JavaScript'> JavaScript </option>" +
+                "<option value = 'Python'> DotNet </option>" +
+                "</select><br>" +
 
                 "<input type = 'submit' value = 'Submit'>"  +
                 "</form>"+
@@ -45,8 +64,18 @@ public class SkillsController {
 
     @PostMapping("processForm")
     @ResponseBody
-    public String displayDetails(@RequestParam String name,String favLanguage){
-        return name ;
+    public String displayDetails(@RequestParam String name,String favLanguage, String secFav, String thirdFav){
+        return "<html>" +
+                "<body style=\"font-size:2vw\">"+
+                "<h1>"+name+"</h1>" +
+
+                "<ol>" +
+                "<li>"+favLanguage+"</li>" +
+                "<li>"+secFav+"</li>" +
+                "<li>"+thirdFav+"</li>" +
+                "</ol>" +
+                "</body>" +
+                "</html>";
     }
 
 
