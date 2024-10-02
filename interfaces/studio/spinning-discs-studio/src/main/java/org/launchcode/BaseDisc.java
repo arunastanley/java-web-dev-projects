@@ -8,11 +8,11 @@ public abstract class BaseDisc {
         private double storageSize;
         private boolean reWritable;
         private int xSpeed;
-        private final double seqSpeed;
+
 //        private boolean isBlank;
 //        private boolean runDefault;
 
-        public BaseDisc(String aTitle, double aStorageSize, boolean aReWritable, int aXSpeed, double seqSpeed){
+        public BaseDisc(String aTitle, double aStorageSize, boolean aReWritable, int aXSpeed){
 
             title = aTitle;
             storageSize = aStorageSize;
@@ -55,10 +55,6 @@ public abstract class BaseDisc {
     }
 
 
-    public double dataTransferRate() {
-
-        return this.getSeqSpeed() * this.getxSpeed();
-    }
 
     // override to String
 

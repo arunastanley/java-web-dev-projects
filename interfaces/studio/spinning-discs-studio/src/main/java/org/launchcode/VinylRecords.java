@@ -13,6 +13,11 @@ public class VinylRecords extends BaseDisc implements OpticalDisc{
         System.out.println("A CD spins at a rate of 200 - 500 rpm.");
     }
 
+    @Override
+    public double dataTransferRate() {
+        return 0;
+    }
+
 //    @Override
 //    public double dataTransferRate() {
 //

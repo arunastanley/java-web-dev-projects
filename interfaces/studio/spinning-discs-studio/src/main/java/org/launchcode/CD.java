@@ -2,7 +2,7 @@ package org.launchcode;
 
 public class CD extends  BaseDisc implements OpticalDisc {
 
-    private final double seqSpeed;
+//    private final double seqSpeed;
 
     public CD(String aTitle, double aStorageSize, boolean aReWritable, int aXSpeed) {
         super(aTitle, aStorageSize, aReWritable, aXSpeed);

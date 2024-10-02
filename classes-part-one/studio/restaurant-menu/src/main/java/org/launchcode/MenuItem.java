@@ -55,12 +55,8 @@ public class MenuItem {
         this. status = status;
     }
 
-    public MenuItem(){
-        this.dishName = dishName;
-        this.price = price;
-        this.description = description;
-        this. category = category;
-        this. status = status;
+    public MenuItem(String dishName, double price, String description, String category){
+        this( dishName,  price,  description,  category,"new");
     }
 
 }
